@@ -145,7 +145,7 @@ nav ul li a:hover {
 
 .hero-image {
     flex: 1;
-    background-image: url('hero-image.jpg');
+    background-image: url('Hero-image.jpg');
     background-size: cover;
     background-position: center;
 }
