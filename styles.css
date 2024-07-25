@@ -38,75 +38,31 @@ a {
     color: var(--text-color);
 }
 
-/* Header Styles */
-header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
 /* Hero Section */
 #hero {
-    display: flex;
     height: 100vh;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 20px;
+    background-image: url('Hero-foods.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
 }
 
 .hero-content {
-    flex: 1;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 600px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .hero-content p {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #666;
 }
 
 .cta-container {
@@ -136,18 +92,74 @@ nav ul li a:hover {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .play-button svg {
     margin-right: 5px;
 }
 
-.hero-image {
-    flex: 1;
-    background-image: url('Hero-foods.jpg');
-    background-size: cover;
-    background-position: center;
+/* Transparent Navigation */
+.transparent-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.transparent-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.transparent-nav ul li {
+    margin-left: 20px;
+}
+
+.transparent-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.transparent-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+
+    .cta-container {
+        justify-content: center;
+    }
+
+    .transparent-nav {
+        flex-direction: column;
+    }
+
+    .transparent-nav ul {
+        margin-top: 15px;
+    }
+
+    .transparent-nav ul li {
+        margin: 0 10px;
+    }
 }
 /* About Section */
 .about {
