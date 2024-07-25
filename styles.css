@@ -72,6 +72,7 @@ nav ul li a:hover {
     padding: 100px 0 50px;
     position: relative;
     overflow: hidden;
+    height: 100vh; /* Set the hero to full viewport height */
 }
 
 .hero::before {
@@ -83,7 +84,8 @@ nav ul li a:hover {
     bottom: 0;
     background-image: url('Hero-foods.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
     opacity: 0.7;
     z-index: 1;
 }
@@ -91,6 +93,9 @@ nav ul li a:hover {
 .hero .container {
     position: relative;
     z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .hero-content {
@@ -143,8 +148,17 @@ nav ul li a:hover {
     color: white;
 }
 
-/* Remove the .hero-image styles as we no longer need them */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+    }
 
+    .hero-content {
+        max-width: 100%;
+    }
+}
 /* About Section */
 .about {
     padding: 80px 0;
